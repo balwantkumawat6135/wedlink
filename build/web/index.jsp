@@ -17,7 +17,7 @@
         }
     }
     Random r = new Random();
-    int v = Math.abs(r.nextInt() % 10);
+    int v = Math.abs(r.nextInt() % 100);
 
     try {
         Class.forName("com.mysql.jdbc.Driver");
@@ -422,8 +422,8 @@
                         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
                             <label for="gender">Looking For a</label>
                             <select id="gender" name="gender" class="form-control">
-                                <option value="Man">Man</option>
-                                <option value="Woman">Woman</option>
+                                <option value="Male">Man</option>
+                                <option value="Female">Woman</option>
                             </select>
                         </div>
                         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
@@ -478,8 +478,8 @@
                         <div class="form-group col-md-4 col-lg-2">
                             <label for="gender">Looking For a</label>
                             <select id="gender" name="gender" class="form-control">
-                                <option value="Man">Man</option>
-                                <option value="Woman">Woman</option>
+                                <option value="Male">Man</option>
+                                <option value="Female">Woman</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4 col-lg-2">
@@ -627,7 +627,7 @@
             </div>
         </div><br>
         <div class="text-center my-4" data-aos="fade-up">
-                <a href="#" class="btn btn-primary">View All Articles</a>
+                <a href="all_success_stories.jsp" class="btn btn-primary">View All Stories</a>
             </div>
         <div class="container-fluid bg-light mt-4 p-4">
             <h2 class="text-center mb-5">How It Works</h2>
@@ -724,7 +724,7 @@
               %>
             </div>
             <div class="text-center mt-4" data-aos="fade-up">
-                <a href="#" class="btn btn-primary">View All Articles</a>
+                <a href="blogs.jsp" class="btn btn-primary">View All Articles</a>
             </div>
         </section>
         <!-- Footer -->
@@ -732,24 +732,32 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h5>About MatriMingle</h5>
+                        <h5>About Wedlink</h5>
                         <p>Connecting hearts, one match at a time.</p>
                     </div>
                     <div class="col-md-4">
                         <h5>Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">About Us</a></li>
-                            <li><a href="#" class="text-white">Privacy Policy</a></li>
-                            <li><a href="#" class="text-white">Terms of Service</a></li>
-                            <li><a href="#" class="text-white">Contact Us</a></li>
+                            <li><a href="about_us.jsp" class="text-white">About Us</a></li>
+                            <li><a href="privacy_policy.jsp" class="text-white">Privacy Policy</a></li>
+                            <li><a href="terms_of_service.jsp" class="text-white">Terms of Service</a></li>
+                            <li><a href="contact_us.jsp" class="text-white">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <h5>Follow Us</h5>
-                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com/wedlink" target="_blank" class="text-white mr-3" title="Follow us on Facebook">
+                            <i class="fa fa-facebook-f fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/wedlink" target="_blank" class="text-white mr-3" title="Follow us on Twitter">
+                            <i class="fa fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com/wedlink" target="_blank" class="text-white mr-3" title="Follow us on Instagram">
+                            <i class="fa fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/wedlink" target="_blank" class="text-white" title="Follow us on LinkedIn">
+                            <i class="fa fa-linkedin fa-lg"></i>
+                        </a>
                     </div>
                 </div>
                 <hr class="bg-light">

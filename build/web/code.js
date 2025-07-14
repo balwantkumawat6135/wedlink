@@ -198,7 +198,8 @@ $(document).on("click", "#search-btn", function() {
             $.post(
                 "search.jsp",{gender:gender,s_age:s_age,e_age:e_age,religion:religion,toungh:toungh},function(data){
                     data=data.trim();
-                    alert(data);
+                    console.log(data);                    
+                    window.location.href = "searched_profile.jsp?user=" + encodeURIComponent(data);
                 }
             );
         }
@@ -286,21 +287,33 @@ $(document).on("click", "#msg-send", function() {
 });
 var to_username = "";
 var from_username = "";
-var flag = 0;
+var chatInterval;
+
 $(document).on("click", ".contact", function() {
-    flag = 1;
+    $(".display-none").attr("class", "chat-input-area");
+    
     to_username = $(this).attr("to_username");
     from_username = $(this).attr("from_username");
-    $("#chatBox").load("msg.jsp", {to_username: to_username, from_username: from_username});
-});
-if(flag==1){
-    setInterval(function() {
+    
+    $("#receiverImg").attr("src", "profile/" + to_username + ".jpg");
+    $("#receiverName").text(to_username);
+    
+    $("#chatBox").load("msg.jsp", {
+        to_username: to_username,
+        from_username: from_username
+    });
+
+    // Clear previous interval if already running
+    if (chatInterval) clearInterval(chatInterval);
+
+    // Start new interval
+    chatInterval = setInterval(function() {
         $("#chatBox").load("msg.jsp", {
-            to_username: to_username, // Dynamic value
-            from_username: from_username  // Dynamic value
+            to_username: to_username,
+            from_username: from_username
         });
     }, 10000);
-}
+});
 $(document).on("click","#sidebar_btn",function(){
    $("#profileSidebar").addClass("open"); 
 });

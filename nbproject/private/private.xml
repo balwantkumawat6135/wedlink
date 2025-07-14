@@ -5,13 +5,15 @@
         <group>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/dashboard.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/story_image.jsp</file>
-            <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/sidebar.jsp</file>
+            <file>file:/home/balwant/Documents/Metrimoniyal/web/modals.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/blog_update.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/index.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/story_update.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/story.jsp</file>
-            <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/blog.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/blog_edit.jsp</file>
+            <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/sidebar.jsp</file>
+            <file>file:/home/balwant/Documents/Metrimoniyal/web/notification.jsp</file>
+            <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/blog.jsp</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/code.js</file>
             <file>file:/home/balwant/Documents/Metrimoniyal/web/Admin/add_story.jsp</file>
         </group>

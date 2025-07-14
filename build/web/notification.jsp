@@ -73,6 +73,9 @@
         .back-btn:hover{
             font-size:32px;
         }
+        body,html{
+            height:100vh;
+        }
     </style>
 </head>
 <body>
@@ -150,13 +153,13 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white mt-5 p-4 text-center">
+</body>
+ <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 p-4 text-center fixed-bottom">
         <div class="container">
             <p class="mb-0">© 2025 Wedlink. All rights reserved.</p>
         </div>
     </footer>
-</body>
 </html>
 <%
         }

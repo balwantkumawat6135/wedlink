@@ -19,18 +19,7 @@
         ResultSet r = p1.executeQuery();
 %>
 
-<div class="row" id="msg_row" t_username="<%=t_username%>" style="margin-top:-10px;" f_username="<%=f_username%>">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-            <img src="profile/<%=t_username%>.jpg" class="rounded-circle" onerror="this.onerror=null; this.src='Image/profile.jpg';" alt="img" style="width:50px;">
-    </div>
-    <div class="col-lg-9 col-md-9 col-sm-9 col-9">
-        <%
-                ResultSet rs13=st.executeQuery("select fname,lname from user_details where username='"+ t_username +"'");
-                if(rs13.next()){
-                    out.print("<span class='nav-link' >"+rs13.getString(1)+" "+rs13.getString(2)+"</span>");
-                }
-         %>
-    </div> 
+<div class="messages-container" id="msg_row" t_username="<%=t_username%>" f_username="<%=f_username%>">
     <%
         String style = "";
         while (r.next()) {
@@ -40,15 +29,64 @@
                 style = "b";
             }
     %>
-    <div class="col-lg-12 mt-2 msg">
+    <div class="msg-row">
         <span class="<%=style%>"><%=r.getString(4)%></span>
     </div>
     <%
         }
     %>
-    <div id="new_msg" class="col-lg-12 mt-2"></div>
+    <div id="new_msg"></div>
 </div>
 
+<style>
+    .messages-container {
+        padding: 10px 0;
+        min-height: 200px;
+    }
+    
+    .msg-row {
+        margin-bottom: 8px;
+        clear: both;
+    }
+    
+    .msg-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .a {
+        padding: 10px 15px;
+        border-radius: 18px;
+        float: left;
+        width: auto;
+        max-width: 60%;
+        background-color: #e1f5fe;
+        color: #0277bd;
+        margin-bottom: 8px;
+        word-wrap: break-word;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .b {
+        padding: 10px 15px;
+        border-radius: 18px;
+        float: right;
+        width: auto;
+        max-width: 60%;
+        background-color: #ffe4ec;
+        color: #c2185b;
+        margin-bottom: 8px;
+        word-wrap: break-word;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .a, .b {
+            max-width: 80%;
+        }
+    }
+</style>
 
 <%
     } catch (Exception e) {

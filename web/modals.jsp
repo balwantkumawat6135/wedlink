@@ -118,7 +118,7 @@
             <div class="modal-body" id="form" style="background-color:#f6f6f6;">
                 <button type="button" style="color:red" class="close"  data-dismiss="modal">×</button>
                 <div class="container mt-4">
-                    <h2>Crop & Upload Profile Picture</h2>
+                    <h2>Crop & Post Your Image</h2>
                     <input type="file" id="inputImage" accept="image/*" class="form-control">
                     <div>
                         <img id="imagePreview">
